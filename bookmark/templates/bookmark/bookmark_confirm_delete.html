@@ -1,0 +1,13 @@
+{% extends 'bookmark/layout.html' %}
+
+{% block title %}Bookmark Delete Confirm{% endblock %}
+
+{% block content %}
+  <form class="" action="" method="post">
+    {% csrf_token %}
+    <div class="alert alert-danger" role='alert'>
+      Bookmark {{ bookmark }}를 삭제하시겠습니까?
+    </div>
+    <input type="submit" class="btn btn-danger" value="Delete">
+  </form>
+{% endblock %}
